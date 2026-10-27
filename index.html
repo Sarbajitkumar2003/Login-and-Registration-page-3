@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Page 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <main class="container">
+
+    <!-- Animated character -->
+    <section class="character-area">
+      <div class="character">
+        <div class="head">
+          <div class="hair"></div>
+          <div class="eyes">
+            <span class="eye"><i></i></span>
+            <span class="eye"><i></i></span>
+          </div>
+          <div class="nose"></div>
+          <div class="mouth"></div>
+        </div>
+
+        <div class="neck"></div>
+        <div class="body">
+          <div class="arm left-arm"></div>
+          <div class="arm right-arm"></div>
+        </div>
+
+        <div class="legs">
+          <div class="leg left-leg"></div>
+          <div class="leg right-leg"></div>
+        </div>
+      </div>
+
+      <h2>Hello, Welcome!</h2>
+      <p>Your journey starts here.</p>
+    </section>
+
+    <!-- Login and registration -->
+    <section class="form-area">
+      <div class="tabs">
+        <button class="tab active" id="loginTab">Login</button>
+        <button class="tab" id="registerTab">Register</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Login to continue</p>
+
+        <label for="loginEmail">Email Address</label>
+        <input id="loginEmail" type="email"
+          placeholder="Enter your email" autocomplete="email" required>
+
+        <label for="loginPassword">Password</label>
+        <div class="password-box">
+          <input id="loginPassword" type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password" required>
+          <button type="button" class="toggle-password"
+            data-target="loginPassword" aria-label="Show password">👁</button>
+        </div>
+
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox"> Remember me
+          </label>
+          <a href="#" id="forgotLink">Forgot password?</a>
+        </div>
+
+        <button class="submit-btn" type="submit">Login Now</button>
+
+        <p class="switch-text">
+          Don't have an account?
+          <a href="#" id="showRegister">Register</a>
+        </p>
+      </form>
+
+      <form id="registerForm" class="auth-form hidden">
+        <h1>Create Account</h1>
+        <p class="subtitle">Join us today</p>
+
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text"
+          placeholder="Enter your name" autocomplete="name" required>
+
+        <label for="registerEmail">Email Address</label>
+        <input id="registerEmail" type="email"
+          placeholder="Enter your email" autocomplete="email" required>
+
+        <label for="registerPassword">Password</label>
+        <div class="password-box">
+          <input id="registerPassword" type="password"
+            placeholder="Create a password"
+            autocomplete="new-password" minlength="8" required>
+          <button type="button" class="toggle-password"
+            data-target="registerPassword" aria-label="Show password">👁</button>
+        </div>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" type="password"
+          placeholder="Repeat your password"
+          autocomplete="new-password" minlength="8" required>
+
+        <label class="terms">
+          <input id="terms" type="checkbox" required>
+          I agree to the Terms & Conditions
+        </label>
+
+        <button class="submit-btn" type="submit">Create Account</button>
+
+        <p class="switch-text">
+          Already have an account?
+          <a href="#" id="showLogin">Login</a>
+        </p>
+      </form>
+
+      <p id="message" class="message" role="status"
+        aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
